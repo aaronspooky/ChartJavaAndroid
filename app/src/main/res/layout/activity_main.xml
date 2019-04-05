@@ -6,9 +6,54 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.github.mikephil.charting.charts.LineChart
-        android:id="@+id/chart"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
+        <Button
+            android:id="@+id/line_chart_simple_btn_lineChartSimple"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Line chart simple"
+            tools:layout_editor_absoluteX="127dp"
+            tools:layout_editor_absoluteY="152dp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Line chart with gradient"
+            tools:layout_editor_absoluteX="99dp"
+            tools:layout_editor_absoluteY="217dp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bar chart"
+            tools:layout_editor_absoluteX="155dp"
+            tools:layout_editor_absoluteY="289dp" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pie chart"
+            tools:layout_editor_absoluteX="158dp"
+            tools:layout_editor_absoluteY="351dp" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Realm chart"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="431dp" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
