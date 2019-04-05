@@ -2,44 +2,43 @@ package com.jaque.androidcharts;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.graphics.Color;
+import android.content.Intent;
 import android.os.Bundle;
-
-import com.github.mikephil.charting.charts.LineChart;
-import com.github.mikephil.charting.data.BarEntry;
-import com.github.mikephil.charting.data.Entry;
-import com.github.mikephil.charting.data.LineData;
-import com.github.mikephil.charting.data.LineDataSet;
-import com.github.mikephil.charting.utils.ColorTemplate;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
+
+    private Button lineChartButton;
+    private Button lineChartGradientButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        LineChart chart = findViewById(R.id.chart);
-        List<Entry> entries = new ArrayList<Entry>();
-        for (int i=0; i<=40; i++) {
-            float val = (float) (Math.random() * 90) - 30;
-            entries.add(new Entry(i, val));
-        }
-        LineDataSet dataSet = new LineDataSet(entries, "Ejemplo");
-        dataSet.setHighlightEnabled(true);
-        dataSet.setHighLightColor(R.color.colorPrimary);
-        dataSet.setColors(ColorTemplate.MATERIAL_COLORS);
-        dataSet.setCircleColor(Color.BLACK);
-        dataSet.setDrawCircleHole(false);
-        LineData lineData = new LineData(dataSet);
-        dataSet.enableDashedLine(10, 10, 0);
-        chart.animateX(1500);
-        chart.setData(lineData);
+        this.lineChartButton = findViewById(R.id.line_chart_simple_btn_lineChartSimple);
+        this.lineChartGradientButton = findViewById(R.id.line_chart_simple_btn_lineChartGradient);
+        this.didTapLineSimpleChartButton();
+        this.didTapLineChartGradientButton();
     }
 
+    private void didTapLineSimpleChartButton() {
+        this.lineChartButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent openActivity = new Intent(v.getContext(), LineChartSimple.class);
+                startActivity(openActivity);
+            }
+        });
+    }
 
+    private void didTapLineChartGradientButton() {
+        this.lineChartGradientButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent openActivity = new Intent(v.getContext(), LineChartGradient.class);
+                startActivity(openActivity);
+            }
+        });
+    }
 }
