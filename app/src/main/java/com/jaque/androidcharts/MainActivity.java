@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         this.didTapLineSimpleChartButton();
         this.didTapLineChartGradientButton();
         this.didTapPieChartButton();
+        this.didTapLineSimpleChartButton();
     }
 
     private void didTapLineSimpleChartButton() {
