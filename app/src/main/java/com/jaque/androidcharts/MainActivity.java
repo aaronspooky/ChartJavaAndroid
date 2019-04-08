@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         this.lineChartGradientButton = findViewById(R.id.line_chart_simple_btn_lineChartGradient);
         this.didTapLineSimpleChartButton();
         this.didTapLineChartGradientButton();
+        this.didTapLineSimpleChartButton();
     }
 
     private void didTapLineSimpleChartButton() {
@@ -31,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
     private void didTapLineChartGradientButton() {
         this.lineChartGradientButton.setOnClickListener(new View.OnClickListener() {
             @Override

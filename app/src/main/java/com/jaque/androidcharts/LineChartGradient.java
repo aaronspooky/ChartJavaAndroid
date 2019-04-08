@@ -61,7 +61,7 @@ public class LineChartGradient extends AppCompatActivity {
         dataSet.setColors(ColorTemplate.MATERIAL_COLORS);
         dataSet.setCircleColor(Color.BLACK);
         dataSet.setDrawCircleHole(false);
-        
+
         // Needed to fill color
         dataSet.setDrawFilled(true);
         dataSet.setFillColor(ColorTemplate.JOYFUL_COLORS[1]);
